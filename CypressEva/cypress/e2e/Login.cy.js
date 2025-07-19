@@ -12,5 +12,9 @@ describe('Login Test', () => {
         loginPage.enterPassword("admin123");
         loginPage.clickLogin();
         cy.url().should('include','/dashboard');
+
+      cy.window().then((win)=>{
+        expect(win.localStorage.getltem('orangehrm')).to.exist;
+      })
     });
 });
