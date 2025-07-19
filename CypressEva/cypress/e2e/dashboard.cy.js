@@ -7,9 +7,9 @@ const loginOage= new LoginPage();
 describe('Dashboard Ui and Hidden Elements', () => {
     before(() => {
         LoginPage.visit();
-        loginPage.enterUsername("Admin");
-        loginPage.enterPassword("admin123");
-        loginPage.clickLogin();
+        LoginPage.enterUsername("Admin");
+        LoginPage.enterPassword("admin123");
+        LoginPage.clickLogin();
     });
     it('should show hidden dropDown and asser its visibility', () => {
         dashboardPage.openHiddenMenu();
